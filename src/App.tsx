@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Counter from "./page/counter";
+import UserDataForm from "./page/UserDataForm";
+import RichTextEditors from "./page/RichTextEditors";
 
-function App() {
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Home from "./page/Home";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/counter" element={<Counter />} />
+    //     <Route path="/user-form" element={<UserDataForm />} />
+    //     <Route path="/rich-text-editors" element={<RichTextEditors />} />
+
+    //     {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+    //   </Routes>
+    // </Router>
+    <Home />
   );
-}
+};
 
 export default App;
